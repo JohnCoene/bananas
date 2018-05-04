@@ -7,5 +7,9 @@ Wrapper to the 'MailChimp' API
 ``` r
 set_bananas("xXXXXXxxXXXxx")
 
-reports <- report_bananas()
+ping_bananas() # healthy banana?
+
+reports <- report_bananas() # get report list
+
+lists <- list_bananas() # get lists
 ```

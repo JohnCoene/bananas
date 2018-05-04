@@ -15,12 +15,12 @@
   paste0(getOption("BANANA_BASE_URL"), "/", ep, "/", id, banana)
 }
 
-.get_banana_data <- function(id, banana, ep){
+.get_banana_data <- function(id, banana, params, ep){
   .check_banana()
 
   uri <- .build_bananas("reports", id, banana)
 
-  resp <- httr::GET(uri, httr::authenticate("anyString", .get_banana()))
+  resp <- httr::GET(uri, request = params, httr::authenticate("anyString", .get_banana()))
 
   if(httr::status_code(resp) != 200)
     stop("Ah", crayon::yellow(" bananas"), "! It's not working.", call. = FALSE)
