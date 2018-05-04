@@ -1,6 +1,8 @@
 # bananas
 
-Wrapper to the 'MailChimp' API
+Wrapper for the 'MailChimp' API.
+
+![bananas](https://www.theurbanlist.com/content/article/banana.jpg)
 
 ## Example
 
